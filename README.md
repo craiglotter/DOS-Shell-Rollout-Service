@@ -1,4 +1,18 @@
-DOS-Shell-Rollout-Service
+DOS Shell Rollout Service
 =========================
 
-DOS Shell Rollout Service is a Windows service that runs in the background to ensure that the DOS Shell Rollout program is actually running, in an attempt to stop network PC users from closing the remote update application down. It simply monitors the Windows processes and if it is discovered that DOS Shell Rollout is not running, it submits an entry to the Invisible Application Starter's Monitor directory containing DOS Shell Rollout's executable path. Created by Craig Lotter, December 2005
+DOS Shell Rollout Service is a Windows service that runs in the background to ensure that the DOS Shell Rollout program is actually running, in an attempt to stop network PC users from closing the remote update application down. It simply monitors the Windows processes and if it is discovered that DOS Shell Rollout is not running, it submits an entry to the Invisible Application Starter's Monitor directory containing DOS Shell Rollout's executable path.
+
+DOS Shell Rollout: The program works by utilising a database on the one end that is used to contain a number of DOS commands. A network PC on startup will log into the database, check which DOS statements have already been executed and execute those statements not yet implemented. All transactions are logged so that the system keeps itself up to date with what has and has not been applied.
+
+Invisible Application Starter: Invisible Application Starter is a semi-invisible application that runs in the background, scanning its special monitor folder for text files dumped by other applications. These text files simply contain an executable path of the application desired to be launched. Invisible Application Starter launches at start up and can only be killed via the Windows Task Manager.
+
+Created by Craig Lotter, December 2005
+
+*********************************
+
+Project Details:
+
+Coded in Visual Basic .NET using Visual Studio .NET 2003
+Implements concepts such as Service Programming, Text file manipulation and Shell Scripting.
+Level of Complexity: simple
